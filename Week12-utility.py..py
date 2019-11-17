@@ -3,6 +3,8 @@
 # CSCI 102 - Section B
 # Week 11 - Part B
 
+import string
+
 #1. PrintOutput
 def PrintOutput(put):
     print('OUTPUT', put)
@@ -48,8 +50,25 @@ def FindWordCount(list1, string1):
     '''
     return occurances
 
-
-
+#5. ScoreFinder
+def ScoreFinder(list1, list2, string1):
+    x = 0
+    spot = False
+    while x < len(list1):
+        if list1[x] == string1.title():
+            spot = True
+            player = list1[x]
+            score = list2[x]
+        elif list1[x] == string1.lower():
+            spot = True
+            player = list1[x]
+            score = list2[x]
+        x += 1
+    if spot:
+        output = player + ' got a score of ' + str(score)
+        PrintOutput(output)
+    else:
+        PrintOutput('player not found')
 
 
 
