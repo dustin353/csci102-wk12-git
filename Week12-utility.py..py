@@ -28,3 +28,29 @@ def LoadFile(filename):
 def UpdateString(string1, string2, index):
     string3 = string1[:index] + string2 + string1[index+1:]
     PrintOutput(string3)
+
+#4. FindWordCount
+def FindWordCount(list1, string1):
+    occurances = 0
+    x = 0
+    while x < len(list1):
+        y = 0
+        while y < len(list1[x]):
+            string2 = list1[x]
+            if string2[y:y+len(string1)] == string1:
+                occurances += 1
+            y += 1
+        x += 1
+    ''' Check if string only matches list element not in list element
+    #for x in list1:
+        #if x == string1:
+            #occurances += 1
+    '''
+    return occurances
+
+
+
+
+
+
+
