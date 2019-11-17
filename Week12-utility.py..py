@@ -23,4 +23,8 @@ def LoadFile(filename):
     print(list2)
     '''
     return list1
-    
+
+#3. UpdateString
+def UpdateString(string1, string2, index):
+    string3 = string1[:index] + string2 + string1[index+1:]
+    PrintOutput(string3)
