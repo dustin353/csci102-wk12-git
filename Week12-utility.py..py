@@ -1,4 +1,4 @@
-#
+# https://github.com/dustin353/csci102-wk12-git
 # Dustin Choat
 # CSCI 102 - Section B
 # Week 11 - Part B
@@ -103,3 +103,20 @@ def Intersection(list1, list2):
         return list3
     else:
         return 'no intersection'
+
+#8. NotIn
+def NotIn(list1, list2):
+    x = 0
+    no_values = True
+    list3 = []
+    while x < len(list1):
+        if list1[x] in list2:
+            pass
+        else:
+            list3.append(list1[x])
+            no_values = False
+        x += 1
+    if no_values:
+        return 'no values'
+    else:
+        return list3
