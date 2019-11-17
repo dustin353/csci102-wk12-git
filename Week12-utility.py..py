@@ -87,19 +87,19 @@ def Union(list1, list2):
         else:
             list3.append(list2[x])
         x += 1
-    PrintOutput(list3)
+    return list3
 
-''' Accidentally made function 7 instead of function 6
-#6. Union
-def Union(list1, list2):
+#7. Intersection
+def Intersection(list1, list2):
     x = 0
+    intersect = False
     list3 = []
-    while x < len(list2):
-        if list2[x] in list1:
-            list3.append(list2[x])
+    while x < len(list1):
+        if list1[x] in list2:
+            list3.append(list1[x])
+            intersect = True
         x += 1
-    print(list3)
-'''
-
-
-
+    if intersect:
+        return list3
+    else:
+        return 'no intersection'
