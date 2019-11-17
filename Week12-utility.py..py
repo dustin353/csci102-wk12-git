@@ -70,6 +70,36 @@ def ScoreFinder(list1, list2, string1):
     else:
         PrintOutput('player not found')
 
+#6. Union
+def Union(list1, list2):
+    x = 0
+    list3 = []
+    while x < len(list1):
+        if list1[x] in list2:
+            pass
+        else:
+            list3.append(list1[x])
+        x += 1
+    x = 0
+    while x < len(list2):
+        if list2[x] in list1:
+            pass
+        else:
+            list3.append(list2[x])
+        x += 1
+    PrintOutput(list3)
+
+''' Accidentally made function 7 instead of function 6
+#6. Union
+def Union(list1, list2):
+    x = 0
+    list3 = []
+    while x < len(list2):
+        if list2[x] in list1:
+            list3.append(list2[x])
+        x += 1
+    print(list3)
+'''
 
 
 
